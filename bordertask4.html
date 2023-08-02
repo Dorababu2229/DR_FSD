@@ -1,0 +1,52 @@
+ <!doctype html>
+<html>
+<head>
+<style>
+.scoop {
+  position: relative;
+  font-size: 10px;
+  font-family: arial black;
+  z-index:1;
+  left:100px;
+  top:100px;
+}
+
+.scoop:before {
+  z-index:-1;
+  content:"";
+  position: absolute;
+  background: radial-gradient(circle at 0 0, transparent 15% ,red calc(15%)) top left, radial-gradient(circle at 100% 0, transparent 15% ,red calc(15%)) top right, radial-gradient(circle at 0 100%, transparent 15% ,red calc(15%)) bottom left, radial-gradient(circle at 100% 100%, transparent 15%, red calc(15%)) bottom right;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 130px;
+  left:-40px;
+  top:-45px;
+}
+.A {
+  position: relative;
+  font-size: 10px;
+  font-family: arial black;
+  z-index:1;
+  left:100px;
+  top:100px;
+}
+.A:before {
+  z-index:-1;
+  content:"";
+  position: absolute;
+  background: radial-gradient(circle at 0 0, transparent 15% ,red calc(15%)) top left, radial-gradient(circle at 100% 0, transparent 15% ,red calc(15%)) top right, radial-gradient(circle at 0 100%, transparent 15% ,red calc(15%)) bottom left, radial-gradient(circle at 100% 100%, transparent 15%, red calc(15%)) bottom right;
+  background-size: 10% 10%;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 90px;
+  left:-20px;
+  top:-25px;
+}
+</style>
+</head>
+<body>
+  <div class="scoop">This is a div with a border image<br></div>
+  <div class="A"></div>
+</body>
+</html>
